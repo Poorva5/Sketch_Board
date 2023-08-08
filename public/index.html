@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" href="./Icons/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/64406a252d.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Open Board</title>
+  </head>
+
+  <body>
+    <div>
+      <div class="main-container">
+        <div class="option-cont">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="tools-container scale-tools">
+          <img
+            src="Images/pencil.png"
+            class="pencil"
+            style="height: 50px; cursor: pointer"
+          />
+          <img
+            src="Images/eraser.png"
+            class="eraser"
+            style="height: 50px; margin-left: 40px; cursor: pointer"
+          />
+          <img
+            src="Images/download (2).png"
+            class="download"
+            style="height: 50px; margin-left: 40px; cursor: pointer"
+          />
+          <img
+            src="Images/submit.png"
+            class="upload"
+            style="height: 50px; margin-left: 40px; cursor: pointer"
+          />
+          <img
+            src="Images/sticky-notes.png"
+            class="sticky"
+            style="height: 50px; margin-left: 40px; cursor: pointer"
+          />
+          <img
+            src="Images/redo.png"
+            class="redo"
+            style="height: 50px; margin-left: 40px; cursor: pointer"
+          />
+          <img
+            src="Images/undo.png"
+            class="undo"
+            style="height: 50px; margin-left: 40px; cursor: pointer"
+          />
+        </div>
+
+        <div class="pencil-tool-container">
+          <div class="pencil-width-container">
+            <input
+              type="range"
+              min="2"
+              max="10"
+              value="3"
+              class="pencil-width"
+            />
+          </div>
+          <div class="pencil-color-container">
+            <div class="black pencil-color"></div>
+            <div class="blue pencil-color"></div>
+            <div class="red pencil-color"></div>
+            <div class="yellow pencil-color"></div>
+            <div class="green pencil-color"></div>
+            <div class="orange pencil-color"></div>
+            <div class="skyblue pencil-color"></div>
+            <div class="pink pencil-color"></div>
+            <div class="purple pencil-color"></div>
+          </div>
+        </div>
+
+        <div class="eraser-tool-container">
+          <div class="eraser-size-container">
+            <input
+              type="range"
+              min="2"
+              max="20"
+              value="3"
+              class="eraser-width"
+              style="margin-top: 20px"
+            />
+          </div>
+        </div>
+      </div>
+
+      <canvas></canvas>
+    </div>
+    <script
+      src="https://cdn.socket.io/4.6.0/socket.io.min.js"
+      integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./tools.js"></script>
+    <script src="./canvas.js"></script>
+    <script>
+      let socket = io.connect("http://localhost:3000");
+    </script>
+  </body>
+</html>

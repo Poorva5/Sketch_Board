@@ -1,0 +1,15 @@
+{
+  "name": "openboard",
+  "version": "1.0.0",
+  "description": "- we using socet.io => to achieve real time communication between/data flow between two system.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Poorva",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.1"
+  }
+}
